@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#See skript teretab kasutajat kellena see skript käivitatakse
 echo -n "Tere, "
 echo -n "$(whoami)"
 echo !
