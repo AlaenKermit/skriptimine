@@ -1,0 +1,11 @@
+#!/bin/bash
+
+NIMI="ALLAN KERME"
+OG="ISP218"
+KOOL="Tartu Vocational Education Center"
+RYHM="ESIMENE GRUPP"
+
+echo Tere, minu nimi on $NIMI. Mina õpin $KOOL koolis. Olen $OG mis on siis IT-süsteemide nooremspetsialisti eriala ja seal olen ma $RYHM;
+echo ---
+echo Ekraan puhastatakse 10 sekundi pärast.
+sleep 10s; clear
