@@ -1,0 +1,13 @@
+#!/bin/sh
+<< ////
+see skript peab siis otsima var kataloogis kasutajale kättesaadavad .log lõpuga failid.
+Siis ta kontrollib mitu rida on igas leitud failis ja väljastab failide nimekirja sorteeritud kahanemisjärjekorras vastavalt ridade arvule.
+////
+#alustame skriptikesega siis siit
+#
+#esiteks leiame logi failid
+#suuname veateated /dev/null i
+#ja järjestame kõik ridade arvu järgi
+find /var/ -name "*.log" 2>>/dev/null -exec wc -l {} + | sort -rn
+#ja nüüd prindib see kõikide rea arvud otse välja
+#LÕPP
