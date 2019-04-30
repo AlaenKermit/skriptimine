@@ -2,7 +2,7 @@
 #skripti algus
 #skript peab väljastama tänase kuupäeva ja ajaga seotud info
 #sätime üles muutujad
-echo "Today is" `date +"%A, %B %d, %Y"` #väljastab kuupäeva 
+echo "Today is" `date +"%A, %B %d, %Y"` #väljastab hetkese kuupäeva 
 echo "Time is " `date +"%H:%M"` #M on minut ja H on tund, väljastab hetke kellaja
 cal #prindib praeguse kuu kalendri
 #skript lõppeb
