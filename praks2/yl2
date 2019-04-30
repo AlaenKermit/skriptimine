@@ -1,11 +1,8 @@
-#!/bin/bash
-# see skript on tunne ainest ja edasijõudmine ja mulje
-NIMI="ALLAN KERME"
-OG="ISP218"
-TUNNE="Olen õppinud skriptimist bashiga ja see on väga vahva!"
-EDASIJOUD="Edasijõudmisega on ikka päris head lood."
-EDASIJOUD2="Saan kõigest aru ja tahan veel rohkemgi skripte teha."
-echo Tere, minu nimi on $NIMI. Õpin $OG õppegrupis. $TUNNE $EDASIJOUD $EDASIJOUD2
-echo ---
-echo EKRAAN PUHASTATAKSE 10 SEKUNDI PÄRAST
-sleep 10s; clear
+#!bin/bash
+#skript2
+#algus
+who | cut -f1 -d" " | cut -f2 -d"." > perenimi # lõikab perenime ja salvestab
+who | cut -f1 -d" " | cut -f1 -d"." > eesnimi # lõikab eesnime ja salvestab
+paste -d"."  perenimi eesnimi > nimed #kokku paneb
+cat nime | sort | uniq # sorteerib väljundi ja korduvad eemaldab
+#skripti lõpp

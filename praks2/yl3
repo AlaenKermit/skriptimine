@@ -1,0 +1,11 @@
+#!/bin/bash
+# see skript on tunne ainest ja edasijõudmine ja mulje
+NIMI="ALLAN KERME"
+OG="ISP218"
+TUNNE="Olen õppinud skriptimist bashiga ja see on väga vahva!"
+EDASIJOUD="Edasijõudmisega on ikka päris head lood."
+EDASIJOUD2="Saan kõigest aru ja tahan veel rohkemgi skripte teha."
+echo Tere, minu nimi on $NIMI. Õpin $OG õppegrupis. $TUNNE $EDASIJOUD $EDASIJOUD2
+echo ---
+echo EKRAAN PUHASTATAKSE 10 SEKUNDI PÄRAST
+sleep 10s; clear
