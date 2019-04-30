@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 #skript2
 #algus
 who | cut -f1 -d" " | cut -f2 -d"." > perenimi # lõikab perenime ja salvestab
