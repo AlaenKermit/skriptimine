@@ -1,0 +1,6 @@
+#!/bin/sh
+#algus###
+echo `hostname` "at" `date +"%H:%M:%S"` `uptime -p` # näitab kaua on masain töötanud
+#hostname annab masinanime
+#date näitab kella tund:minut:sekund ja uptime näitab kaua on töötanud
+#skripti lõpp
