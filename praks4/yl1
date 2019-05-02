@@ -1,0 +1,9 @@
+#!/bin/sh
+#see skript peab siis küsima kasutajalt tema nime ja siis tervitama teda
+#
+#
+echo -n "Tere, mis on teie eesnimi? " #küsib eesnime
+read eesnimi #annab eesnime sisestamisekoha
+echo -n "Mis on teie perenimi? " #küsib perenime
+read perenimi #annab perenime sisestamisekoha
+echo "Nii tore on teid jälle näha $eesnimi $perenimi" #tervitab eesnime ja perenime kasutades

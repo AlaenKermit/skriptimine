@@ -1,0 +1,19 @@
+#!/bin/sh
+#alustame
+#reisijate arv
+echo -n "Mitu reisijat on grupis?: " ; read reisijate_arv
+#
+#bussikohtade arv
+echo -n "Mitu kohta on bussis?: " ; read bussikohad_arv
+#
+#maha jäi
+bussi=$(expr $reisijate_arv / $bussikohad_arv)
+
+if [$bussikohad_arv -gt $reisijate_arv]; then
+jaak=$(expr $bussikohad_arv - $reisijate_arv)
+echo "Täielikult on täidetud $bussi bussi ja üle jääb $jaak kohta."
+else
+maha=$(expr $reisijate_arv % $bussikohad_arv)
+echo "Täielikult on täidetud $bussi bussi ja maha jääb $maha inimest."
+fi
+#kõik

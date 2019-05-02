@@ -1,0 +1,41 @@
+#!/bin/sh
+#skript algab
+#kandiku pikkus ja laius
+echo -n "Sisestage kandiku pikkus ja laius (cm): "
+read k_pikkus k_laius
+#
+#küpsise andmed
+echo -n "Sisestage  küpsiste pikkus ja laius (cm): "
+read ky_pikkus ky_laius
+#
+echo -n "Sisestage mitu kypsist on pakis (tk): "
+read pakis
+#
+#kihtide arv
+echo -n "Sisestage kihtide arv numbrina: "
+read kihid
+#
+#
+#arvutused
+#
+#kandiku pikkus
+kandik=`expr $k_pikkus \* $k_laius`
+#
+#küpsise pindala
+kypsis=`expr $ky_pikkus \* $ky_laius`
+#
+#palju küpsiseid ühel kihil
+yhes_kihis=`expr $kandik / $kypsis`
+#
+#küpsiste arv kokku
+kypsised=`expr $yhes_kihis \* $kihid`
+#
+#pakkide arv
+pakk_arv=`expr $kypsised / $pakis`
+#
+#kasutamata arv protsendina
+jaak=`expr $kypsised % $pakis`
+#väljastame tulemused
+#
+echo "Kokku on vaja $pakk_arv pakki ja lisaks $jaak küpsist!"
+#lopp
