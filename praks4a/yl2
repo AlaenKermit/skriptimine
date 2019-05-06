@@ -1,0 +1,7 @@
+#!/bin/sh
+#alustame skriptiga!!!
+echo -n "Tervist! Mis on teie ringi raadius sentimeetrites?: "
+read raadius
+
+raadius_ruudus=`exrp $raadius /* $raadius`
+pindala=`exrp 3.14 /* $raadius_maker | bc
