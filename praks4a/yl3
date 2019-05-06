@@ -2,13 +2,16 @@
 #valime mida backuppida
 echo "Palun sisestage kataloog, mida soovite backuppida"
 read backup
+echo "andke katalooginimi"
+read baasnimeke
 sleep 1
-echo "Palun sisestage mida soovite panna backupi nimeks"
-read BACKUP_NAME
+#võtame baasnime...
+echo "Palun oodake..."
+baasnimi="$(basename -- $baasnimeke)" #võtame kataloginimelise baasnime
 sleep 1
 #alustame backuppimisega
 d=$(date --iso) #võtame kuupäeva
-backup=$BACKUP_NAME"_"$d".tar.gz" #anname laiendid
-tar -czvf ./$backup ~
-echo "korras"
-ls -l
+backup=$baasnimi"_"$d".tar.gz" #anname laiendid
+backup_kaust=/home/user/skriptimine/praks4a/backup/
+tar -zcvf $backup $backup_kaust
+echo "Tehtud!"
