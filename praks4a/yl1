@@ -1,0 +1,15 @@
+#!/bin/sh
+#küsime nende nime värgi
+echo -n "Mis on teie nimi?: "
+read nimi
+echo "Tervist noormees $nimi"
+#Vaatame mis aasta täna on
+realtimeaasta=`date +%Y` #võtab hetkese aasta
+#kontrollime aastat
+echo "Praegu on aasta $realtimeaasta"
+#ütleme et sisestada sünniaasta
+echo "Palun sisestage oma sünniaasta"
+read synniaasta
+#lisame siia vahvad asjad mis kontrollivad kas inimene on tulevikust
+vanus=$((realtimeaasta-synniaasta))
+echo "Te olete $vanus aastat vana"
