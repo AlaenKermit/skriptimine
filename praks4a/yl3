@@ -1,0 +1,17 @@
+#!/bin/sh
+#valime mida backuppida
+echo "Palun sisestage kataloog, mida soovite backuppida"
+read backup
+sleep 1
+echo "Palun sisestage kataloog, kuhu soovite backupi luua"
+read dest
+sleep 1
+echo "Palun sisestage mida soovite panna backupi nimeks"
+read BACKUP_NAME
+sleep 1
+#alustame nüüd backupi tegemisega
+d=$(date --iso) #võtame kuupäeva
+backup=$BACKUP_NAME"_"$d".tar.gz" #anname laiendid faili nimele
+tar -czvf ./$backup $dest #teeme backupi antud kataloogist antud sihtkohta
+echo "Backup lõpetatud!"
+ls -l $dest
