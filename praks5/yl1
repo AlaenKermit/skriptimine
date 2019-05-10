@@ -1,0 +1,8 @@
+#!/bin/sh
+#see skript peab arvutama kolmurga hypotenuusi v22rtuse mis on t2isnurkne
+echo -n "Sisestage palun a kylje pikkus" ; read klmn_nrk_a
+echo -n "Sisestage palun b kylje pikkus" ; read klmn_nrk_b
+a_ruut=$(($klmn_nrk_a ** 2))
+b_ruut=$(($klmn_nrk_b ** 2))
+summa=$(echo "scale=2;sqrt ($summa)" | bc)
+echo "c: $c" #vastus
