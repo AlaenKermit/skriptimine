@@ -1,0 +1,17 @@
+#!/bin/sh
+#kolmnurga pindala basic calculatoriga kuna tulevad komad :)
+echo -n "sisesta a külje pikkus: ";read a
+echo -n "sisesta b külje pikkus: ";read b
+echo -n "sisesta c külje pikkus: ";read c
+#vajame pindala aga selleks on vaja teada ümbermõõtu
+#nüüd arvutame ümbermõõdu
+umbermoot=$(echo "scale=2;($a+$b+$c)/2" | bc) #arvutame ümbermõõdu 
+#ja nüüd
+#peale ümbermõõtu
+#saame endale 
+#arvutada
+#pindala
+pindala=$(echo "scale=2;sqrt($umbermoot*($umbermoot-$a)*($umbermoot-$b)*($umbermoot-$c))" | bc) #arvutasime toreda pindala valemiga
+echo "Ja kolmnurga pindala on......."
+sleep 4
+echo "$pindala"
