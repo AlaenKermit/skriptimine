@@ -1,0 +1,22 @@
+#!/bin/sh
+#skript mis ütleb mis nädalapäeval sa tagasi tuled
+echo "pühapäev-0"
+echo "esmaspäev-1"
+echo "teisipäev-2"
+echo "kolmapäev-3"
+echo "neljapäev-4"
+echo "reede-5"
+echo "laupäev-6"
+echo -n "Palun sisestage päeva number millal lähete reisile: ";read number
+sleep 1
+echo -n "Mitu päeva viibite reisil: ";read aega
+lisa=$((aeg%7))
+tagasi=$(($number+$lisa))
+0=echo -n "pühapäev"
+1=echo -n "esmaspäev"
+2=echo -n "teisipäev"
+3=echo -n "kolmapäev"
+4=echo -n "neljapäev"
+5=echo -n "reede"
+6=echo -n "laupäev"
+echo "Jõuate tagasi $tagasi
