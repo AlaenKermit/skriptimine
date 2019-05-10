@@ -1,8 +1,12 @@
 #!/bin/sh
-#see skript peab arvutama kolmurga hypotenuusi v22rtuse mis on t2isnurkne
-echo -n "Sisestage palun a kylje pikkus" ; read klmn_nrk_a
-echo -n "Sisestage palun b kylje pikkus" ; read klmn_nrk_b
-a_ruut=$(($klmn_nrk_a ** 2))
-b_ruut=$(($klmn_nrk_b ** 2))
-summa=$(echo "scale=2;sqrt ($summa)" | bc)
-echo "c: $c" #vastus
+#see skript peab arvutama kolmnurga hüpotenuusi väärtuse mis on täisnurkne
+echo -n "Sisestage palun a külje väärtus = " ; read klmn_nrk_a
+echo -n "Sisestage palun b külje väärtus = " ; read klmn_nrk_b
+a_ruut=$(echo "scale=2;($klmn_nrk_a)" | bc) #arvutame a külje ruudu
+b_ruut=$(echo "scale=2;($klmn_nrk_b)" | bc) #arvutame b külje ruudu
+#saame a ja b summa
+summa=$(echo "scale=2;($a_ruut+$b_ruut)" | bc) #a ja b ruutude summa
+#ja nüüd me tahame tervet summat
+summ4=$(echo "scale=2; sqrt ($summa)" | bc) #saime terve summa ka basic calculator-i abil
+#anname vastuse välja
+echo "C = $summ4"
