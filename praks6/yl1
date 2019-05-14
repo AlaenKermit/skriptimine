@@ -1,0 +1,12 @@
+#!/bin/sh
+#tervitused jällegi!
+#see on siis skript mis peab tuvastama ära kas number on paaris või mitte
+echo -n "sisesta suvaline täisarv: " ;read arv #ütleme kasutajale et sisestada täisarv
+alles=$(( $arv % 2 )) #võtab arvu mis oli sisestatud ja jagab selle kahega 
+if [ $alles -eq 0 ] # kui $alles 
+then
+	echo "$arv on paaris"
+else
+	echo "arv on paaritu"
+fi
+#ja kõik, soovime teile head päeva jätku!
