@@ -1,0 +1,12 @@
+#!/bin/sh
+#no on alles tore, jälle bussid
+echo -n "Sisestage palun reisijate arv: ";read reisijad
+echo -n "Sisestage palun kohtade arv bussis: ";read kohad
+#arvutuse kohakene
+busside_arv=`expr $reisijad / $kohad`
+#mitu kohta jääb puudu
+puudu=`expr $reisijad % $kohad`
+if [ %puudu -eq 0]
+	then echo "Kokku on vaja $busside_arv bussi!"
+	else echo "Kokku on vaja `expr $busside_arv + 1` bussi"
+fi
