@@ -1,0 +1,10 @@
+#!/bin/sh
+#selles ülesandes peab kasutama if käsku
+valik=0
+echo "Valige palun number mida eelistate rohkem"
+echo "1 - Unix (Sun Os)"
+echo "2 - Linux (Red Hat)"
+
+echo -n "Palun sisestage number: ";read osch
+if [ $osch -eq 1 ] ; then
+	
