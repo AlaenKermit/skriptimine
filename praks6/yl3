@@ -7,4 +7,18 @@ echo "2 - Linux (Red Hat)"
 
 echo -n "Palun sisestage number: ";read osch
 if [ $osch -eq 1 ] ; then
-	
+	echo "Olete Unixi poisikene"
+else
+	echo "teile ei meeldi linuxikene"
+	if [ $osch -eq 2 ] ; then
+		echo "Linux laadne poisikene ikka"
+	else
+		echo "miks teile ei meeldi unix??? :("
+		if [ $osch -eq 3 ] ; then
+			echo "vau leidsid salajase valiku!!!!"
+			echo "oled windowsi poiss nüüd"
+		else
+			echo "no kurat kui ei meeldi windows siis ikka ei vääri"
+		fi
+	fi
+fi
