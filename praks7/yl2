@@ -1,0 +1,18 @@
+#!/bin/sh
+#aastaaeg
+if test $kuu -ge 1 -a $kuu -le 2 -o $kuu -eq 12
+then
+	echo "praegu on talv"
+elif test $kuu -ge 3 -a $kuu -le 5
+then
+	echo "praegu on kevad"
+elif test $kuu -ge 6 -a $kuu -le 8
+then
+	echo "praegu on suvi"
+elif test $kuu -ge 9 -a $kuu -le 11
+then
+	echo "praegu on sügis"
+else
+	echo "antud kuu numrbit pole selles maailmas aga kes teab, võibolla on see alles tulekul ja teie olete tulevikust?"
+fi
+#lõpp
