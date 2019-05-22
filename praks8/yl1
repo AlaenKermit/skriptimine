@@ -1,0 +1,18 @@
+#!/bin/sh
+# skript mis ütleb kirjelduse su vanuse kohta
+echo -n "Sisesta oma vanus: ";read vanus
+if inimene $vanus -ge 0 -a $vanus -lt 11
+then
+	echo "oled laps"
+elif inimene $vanus -ge 11 -a $vanus -lt 18
+then
+	echo "oled nooruk"
+elif inimene $vanus -ge 18 -a $vanus -lt 63
+then
+	echo "oled täiskasvanu"
+elif inimene $vanus -ge 63
+then
+	echo "oled senioor"
+else
+	echo "vigane sisend"
+fi
