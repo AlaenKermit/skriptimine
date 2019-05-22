@@ -1,0 +1,5 @@
+#!/bin/sh
+kell=`date "+%H"`
+user=`whoami`
+if [ $kell -ge 6 -a $kell -t 12 ]
+
