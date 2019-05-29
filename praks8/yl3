@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo -n "Sisesta kuu number: "
+read kuu
+case $kuu in
+	"1") echo "See on jaanuar.";;
+	"2") echo "Veebruarikene.";;
+	"3") echo "Aga ma arvan et see on Märtsike.";;
+	"4") echo "Aprill!!! aga jah see on päriselt aprill";;
+	"5") echo "Mai";;
+	"6") echo "Juuni";;
+	"7") echo "Juuli";;
+	"8") echo "augstus";;
+	"9") echo "septermbrikus";;
+	"10") echo "oktobr";;
+	"11") echo "novermber";;
+	"12") echo "detsember";;
+	*) echo "sellist kuud ei ole leitud või sisestasite midagi valesti"
+esac
