@@ -1,5 +1,15 @@
 #!/bin/sh
 kell=`date "+%H"`
 user=`whoami`
-if [ $kell -ge 6 -a $kell -t 12 ]
-
+if [ $kell -ge 6 -a $kell -t 12 ]; then
+		echo "Tere hommikust, $(whoami)!"
+elif [ $kell -ge 12 -a $kell -lt 18]; then
+		echo "Tere päevast, $(whoami)!"
+elif [ $kell -ge 18 -a $kell -lt 22]; then
+		echo "Tere õhtust, $(whoami)!"
+elif [ $kell -ge 22 -a $kell -lt 24] || [ $kell -ge 0 -a $kell -lt 6 ]; then
+		echo "Head ööd, $(whoami)!"
+else
+		echo "Vale sisend"
+fi
+#lõpp
