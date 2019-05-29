@@ -1,0 +1,20 @@
+#!/bin/sh
+for (( arv=1 ; arv<21; arv++ ))
+do
+if [ $arv -eq 0 -o $arv -eq 1 ]; then
+echo $arv "ei ole algarv"
+else
+jaga=2
+jaak=$(( $arv % $jaga))
+while [ $jaak -ne 0 ]
+do
+jaga=$(( $jaga +1 ))
+jaak=$(( $arv % $jaga ))
+done
+if [ $arv -eq $jaga ]; then
+echo $arv "on algarv"
+else
+echo $arv "ei ole algarv"
+fi
+fi
+done
